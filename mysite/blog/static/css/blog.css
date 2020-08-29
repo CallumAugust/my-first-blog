@@ -18,10 +18,10 @@ body {
 	text-decoration: none;
 }
 .content {
-	margin-left: 40px;
+	margin-left: 20px;
 }
 h1, h2, h3, h4 {
-	font-family: 'Lobster', cursive;
+	font-family: 'Alata', cursive;
 }
 .date {
 	color: #828282;
@@ -39,12 +39,12 @@ h1, h2, h3, h4 {
 	margin-right: 20px;
 }
 .post {
-	margin-bottom: 70px;
+	margin-bottom: 20px;
 }
 .post h2 a {
 	color: #386641;
 }
 
 .post h2 a:visited {
-	color: #6A994E;
+	color: #A7C957;
 } 
