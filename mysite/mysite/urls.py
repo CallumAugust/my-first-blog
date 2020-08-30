@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', include('blog.urls')),
 	url('cv/', views.cv_page, name='CV'),
+	url('edit/', views.edit_section, name='editCV'),
 ]

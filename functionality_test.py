@@ -81,12 +81,18 @@ class EditorVisitor(unittest.TestCase):
 		#but with an edit button by the title of each section.
 		buttons = self.browser.find_elements_by_class_name('btn')
 		self.assertTrue(len(buttons)==6)
-
-
-	#The editor clicks on the edit button and it taken to a form
-	#The form has the section title and a text box below with the current section contents in it.
-	#The editor changes an item and then clicks a save button
-	#The editor is taken back to the CV page with the new edited text
+		#The editor clicks on the edit button next to "Interests" and it taken to a form
+		#The form has the section title
+		buttons[5].click()
+		time.sleep(1)
+		section_title = self.browser.find_element_by_tag_name('h2')
+		self.assertIn('Interests', section_title.text)
+	 	#and a text box below with the current section contents in it.
+		text_box = self.browser.find_elements_by_tag_name('input')
+		self.assertIn("Kayaking", text_box.text)
+	 			
+		#The editor changes an item and then clicks a save button
+		#The editor is taken back to the CV page with the new edited text
 
 if __name__ == '__main__':
 	unittest.main(warnings='ignore')
