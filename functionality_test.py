@@ -52,12 +52,13 @@ class EmployeeVisitor(unittest.TestCase):
 		#They see 5 sections titled: "Personal Statement", "Education", "Tech Skills", "Work Experience" and 			"Interests"
 		#Within each section they see the information
 		section_titles = self.browser.find_elements_by_tag_name('h3')
-		self.assertTrue(len(section_titles)==5)
-		self.assertIn('Personal Statement', section_titles[0].text)
-		self.assertIn('Education', section_titles[1].text)
-		self.assertIn('Tech Skills', section_titles[2].text)
-		self.assertIn('Work Experience', section_titles[3].text)
-		self.assertIn('Interests', section_titles[4].text)		
+		self.assertTrue(len(section_titles)==6)
+		self.assertIn('Contact', section_titles[0].text)
+		self.assertIn('Personal Statement', section_titles[1].text)
+		self.assertIn('Education', section_titles[2].text)
+		self.assertIn('Tech Skills', section_titles[3].text)
+		self.assertIn('Work Experience', section_titles[4].text)
+		self.assertIn('Interests', section_titles[5].text)		
 
 	#The employer is done looking at the CV and clicks a link "Back to Blog" in order to go back to the blog.
 	def test_can_go_back_to_blog(self):
@@ -75,9 +76,13 @@ class EditorVisitor(unittest.TestCase):
 		self.browser.quit()
 
 	def test_edit_button(self):
-		pass
-	#The editor visits the cv page and sees the same view as the employer but with an edit button by the title
-	#of each section.
+		self.browser.get('http://127.0.0.1:8000/cv/')
+		#The editor visits the cv page and sees the same view as the employer
+		#but with an edit button by the title of each section.
+		buttons = self.browser.find_elements_by_class_name('btn')
+		self.assertTrue(len(buttons)==6)
+
+
 	#The editor clicks on the edit button and it taken to a form
 	#The form has the section title and a text box below with the current section contents in it.
 	#The editor changes an item and then clicks a save button
