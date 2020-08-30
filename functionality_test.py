@@ -1,5 +1,6 @@
 from selenium import webdriver
 import unittest
+import time
 
 class EmployeeVisitor(unittest.TestCase):
 
@@ -17,6 +18,8 @@ class EmployeeVisitor(unittest.TestCase):
 		self.assertIn('CV', header_text)
 		#They click on the link and are re-directed to the CV page
 		link = self.browser.find_element_by_link_text('CV')
+		link.click()
+		time.sleep(1)
 		#The page title is CV
 		self.assertIn('CV', self.browser.title)
 		self.fail("Finish this Test!")
