@@ -67,5 +67,21 @@ class EmployeeVisitor(unittest.TestCase):
 		time.sleep(1)
 		self.assertIn("Callum's Blog", self.browser.title)
 
+class EditorVisitor(unittest.TestCase):
+	def setUp(self):
+		self.browser = webdriver.Firefox()
+	
+	def tearDown(self):
+		self.browser.quit()
+
+	def test_edit_button(self):
+		pass
+	#The editor visits the cv page and sees the same view as the employer but with an edit button by the title
+	#of each section.
+	#The editor clicks on the edit button and it taken to a form
+	#The form has the section title and a text box below with the current section contents in it.
+	#The editor changes an item and then clicks a save button
+	#The editor is taken back to the CV page with the new edited text
+
 if __name__ == '__main__':
 	unittest.main(warnings='ignore')
