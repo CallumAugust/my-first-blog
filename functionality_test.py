@@ -18,6 +18,7 @@ class EmployeeVisitor(unittest.TestCase):
 		#They click on the link and are re-directed to the CV page
 		link = self.browser.find_element_by_link_text('CV')
 		#The page title is CV
+		self.assertIn('CV', self.browser.title)
 		self.fail("Finish this Test!")
 
 
