@@ -56,9 +56,9 @@ class EmployeeVisitor(unittest.TestCase):
 		self.assertIn('Contact', section_titles[0].text)
 		self.assertIn('Personal Statement', section_titles[1].text)
 		self.assertIn('Education', section_titles[2].text)
-		self.assertIn('Tech Skills', section_titles[3].text)
-		self.assertIn('Work Experience', section_titles[4].text)
-		self.assertIn('Interests', section_titles[5].text)		
+		self.assertIn('Work Experience', section_titles[3].text)
+		self.assertIn('Interests', section_titles[4].text)
+		self.assertIn('Tech Skills', section_titles[5].text)
 
 	#The employer is done looking at the CV and clicks a link "Back to Blog" in order to go back to the blog.
 	def test_can_go_back_to_blog(self):

@@ -3,105 +3,10 @@
 	<h4><a href = '/'>Back to Blog</a></h4>
 	<h1>Callum August</h1>
 	<h2>Curriculum Vitae</h2>
-	<h3>Contact  <a class="btn" href="/cv/edit/">Edit</a></h3>
 	
-	<address>
-		24 Long Rd<br>
-		Cambridge<br>
-		Cambridgeshire<br>
-		UK
-	<address>
-	
-	<a class="phone" href="tel:07459264859">07459 264859</a><br>
-	<a class="email" href="mailto:callum@august-family.org.uk">callum@august-family.org.uk</a>
-
-	<h3>Personal Statement <a class="btn" href="/cv/edit/">Edit</a></h3>
-	<p>Passionate about developing my skills – In my studies so far, I have thoroughly enjoyed
-learning new skills within a wide range of subjects as well as improving existing skills. I am excited
-to continue to learn and improve my skills in a workplace environment.<br>Team member and leader – I have developed my skill in working within a team both academically
-and through my interests. In my 1 st year team Robot Programming module I achieved 80% with our
-team coming 3 rd overall. I have completed my Gold Duke of Edinburgh award. I am a dedicated
-member of the University of Birmingham Kayak club, serving as White-water Representative in
-2017/18 & 2019/20 which involved organising and leading weekly white-water trips to North Wales. Being a
-member of the club has allowed me to do courses such as BCU 4* white-water leader training.<br>Good Communicator – Through my previous work outside of computer science I have been able
-to develop strong communication skills. In my previous work as a gardener I had to be able to talk
-to clients in a manner which inspired confidence and ensure that I fully understood their
-requirements. When working with the site manager at St Peters’ School I had to communicate with
-staff and pupils in an appropriate manner. I volunteered at a local charity shop working behind the
-till which allowed me to talk to a wide variety of people across many ages.</p>
-	<h3>Education <a class="btn" href="/cv/edit/">Edit</a></h3>
-	<p>I am currently studying Computer Science at the University of Birmingham and am in my 3 rd year. I
-enjoy both the theoretical side and the practical side of computer science and am particularly
-interested in AI/Machine learning as well as Functional programming as can be seen from my
-highest scoring modules from my first year at the university:</p>
-	<ul>
-		<li>80% Robot Programming</li>
-		<li>79% Elements of Functional Computing</li>
-		<li>77% Data Structures and Algorithms</li>
-	</ul>
-	A Levels:
-	<ul>
-		<li>Maths A Level - A*</li>
-		<li>Physics A Level - A</li>
-		<li>Computing A Level - A</li>
-		<li>Chemistry AS - A</li>
-		<li>Further Maths AS - A</li>
-	</ul>
-	GCSEs: 9 A*-B
-	<h3>Tech Skills <a class="btn" href="/cv/edit/">Edit</a></h3>
-	Programming Languages:
-	<ul>
-		<li>OCaml</li>
-		<li>Java</li>
-		<li>Python</li>
-		<li>Visual Basic</li>
-		<li>C</li>
-		<li>C++</li>
-	</ul>
-	Other:
-	<ul>
-		<li>Git</li>
-		<li>Windows</li>
-		<li>Linux</li>
-	</ul>
-	<h3>Work Experience <a class="btn" href="/cv/edit/">Edit</a></h3>
-	<p>
-	TCS Work Experience week
-I participated in a week of work experience at Tata Consultancy Services in their London office,
-where I spent the week learning about how the company functioned before giving a team
-presentation to be judged. Our team was ranked 1 st place.
-Sungard Financial Systems Work Experience week<br>
-Working with Sungard Financial Systems (now part of FIS) at their Godalming office, I shadowed
-the development team leader learning about their work by sitting in on meetings and talking to
-developers, testers and HR. While I was there I also was directed to learn about development
-strategies such as Agile. By the end of the week I had a good understanding of what being a part
-of the company is like. I also was able to help create a small program in BASIC for converting their
-version log to a new format.<br>
-Surrey Hills Home and Garden Services - Summer 2016 & 2017
-(www.surreyhillshomeandgardenservices.co.uk)
-Working within a team I was able to visit a variety of different client’s homes working closely with
-the clients to provide garden services. Working closely with clients enabled me to develop my
-communication skills learning to ask appropriate questions to ensure proper understanding of
-instructions and to show the client that I would be able to complete the job properly.<br>
-Exam Invigilator & Site Manager’s Assistant at St Peter’s School Guildford - Summer 2018
-Working as an exam invigilator for GCSE and A-Level exams I was in a position of responsibility to
-ensure that the exams were conducted properly, through talking to staff I was later offered further
-work by the site manager. When working with the site manager we were given tasks, as a team,
-and we were required to quickly decide on a plan of action. Working with staff to help tidy up
-towards the end of summer term and working with tradespeople to prepare the site for the next
-academic year.
-	</p>
-	<h3>Interests <a class="btn" href="/cv/edit/">Edit</a></h3>
-	<p>Kayaking
-I am a heavily involved member of UBKC visiting 3 training sessions and 1-day trip weekly. My
-experiences in white-water kayaking have seen me rely on others for my safety and in later years
-to be relied on for the safety of club freshers. As well as white-water, since coming to university I
-have taken up kayak polo which has given me opportunity to train within a team and to give and
-receive constructive criticism in our regular training sessions and tournaments.<br>
-Scouting
-I have been involved in scouting from the age of 8 and have pursued this through to now. Over the
-years it has taught me a huge number of transferrable skills. I was selected to attend the 23 rd
-World Scout Jamboree in Japan where I spent 3 weeks seeing the Japanese culture and meeting
-thousands of other scouts from 152 different countries.</p>
+	{% for section in sections %}
+		<h3>{{ section.title }} <a class="btn" href="/edit/">Edit</a></h3>
+		{{ section.text | safe }}
+	{%endfor%}
 
 </html>
